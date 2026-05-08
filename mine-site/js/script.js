@@ -1,16 +1,21 @@
-/*
-  - Escreva um loop (for) que exiba a frase abaixo
-   no console;
-  - Substitua o "X" pela informação correta;
-  - "X" deve começar em 1 na 1ª exibição da frase e em 
-  10 na última;
-  - Exiba a frase 10x no console.
+const botoes = document.querySelectorAll(".accordion");
+const paneis = document.querySelectorAll(".panel");
 
-  "Esta é a Xª vez que esta frase é exibida no console."
-*/
+for (let i = 0; i < botoes.length; i++ ) {
 
-for(let dolly = 1; dolly <=10; dolly++) {
- //console.log("Esta é a "+ dolly + "dolly vez que esta frase é exibida no console.");
- console.log('Esta é a ${dolly}ª vez que esta frase é exibida no console.')
+    let numero = i;
+
+  
+  botoes[numero].onclick = function() {
+    if (paneis[numero].style.display == "block") {
+        paneis[numero].style.display = "none";
+
+    }  else{
+        paneis[numero].style.display = "block";
+    }
+  
+
+
+  }
 
 }
